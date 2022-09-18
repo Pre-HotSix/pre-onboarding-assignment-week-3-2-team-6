@@ -3,7 +3,7 @@
     {
       "profile_url": "https://picsum.photos/id/6/50/50",
       "author": "abc_6",
-      "content": "React 소스 배포는 보통 어떤식으로 하나요??",
+      "content": "React 소스 배포는 보통 어떤식으로 하나요?",
       "createdAt": "2022-03-08",
       "id": 6
     },
@@ -71,18 +71,11 @@
       "createdAt": "2022-03-16"
     },
     {
-      "id": 17,
-      "profile_url": "https://picsum.photos/id/18/50/50",
+      "profile_url": "https://picsum.photos/id/17/50/50",
       "author": "abc_17",
-      "content": "UI 테스트는 어떻게 진행하나요",
-      "createdAt": "2022-03-17"
-    },
-    {
-      "id": 18,
-      "profile_url": "https://picsum.photos/id/18/50/50",
-      "author": "abc_18",
-      "content": "local storage는 언제 사용하는게 좋나요.",
-      "createdAt": "2022-03-18"
+      "content": "post 잘되나요?",
+      "createdAt": "2022-09-18",
+      "id": 17
     }
   ]
 }

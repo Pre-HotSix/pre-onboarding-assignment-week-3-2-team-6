@@ -7,8 +7,8 @@ import { paginationAction, LIMIT } from '../../redux/modules/pagination';
 
 function CommentList() {
   const dispatch = useDispatch();
-  const comments = useSelector(state => state.comments);
-  const singleComment = useSelector(state => state.singleComment);
+  const comments = useSelector(state => state.comments.data);
+  const singleComment = useSelector(state => state.singleComment.data);
   const pagination = useSelector(state => state.pagination);
   const offset = (pagination - 1) * LIMIT;
 

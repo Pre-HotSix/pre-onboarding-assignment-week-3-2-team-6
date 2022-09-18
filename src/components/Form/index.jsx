@@ -19,7 +19,7 @@ function Form() {
     return full;
   };
 
-  const singleComment = useSelector(state => state.singleComment);
+  const singleComment = useSelector(state => state.singleComment.data);
   
   const postData = ({ ...inputData }) => dispatch(postCommentThunk({ ...inputData }));
   const putData = (id, { ...inputData }) => dispatch(putCommentThunk(id, { ...inputData }));

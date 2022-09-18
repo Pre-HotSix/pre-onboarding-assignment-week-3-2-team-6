@@ -1,13 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import MainPage from '../pages/MainPage/MainPage';
-// import { MainPage } from '../pages/index';
+import Layout from '../components/commons/layout';
+import { MainPage } from '../pages';
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<MainPage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
-}
+};

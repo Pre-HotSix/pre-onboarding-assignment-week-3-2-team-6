@@ -41,7 +41,7 @@ https://www.youtube.com/watch?v=qrooeil4vdg
 
 레포지토리를 `clone` 합니다
 ```markdown
-$ git clone https://github.com/Pre-HotSix/pre-onboarding-assignment-week-3-2-team-6/tree/main/src
+$ git clone https://github.com/Pre-HotSix/pre-onboarding-assignment-week-3-2-team-6
 ```
 dependencies를 설치합니다
 ```markdown
@@ -89,7 +89,7 @@ root
 |폴더|구분|
 |:--|:--|
 |apis|api함수들을 모아둔 폴더|
-|assets|더미 및 이미지 등 로컬 파일|
+|containers|컴포넌트들에 대한 부모 Container모음|
 |components|코드 재사용을 위한 컴포넌트 관리형 폴더|
 |pages|url주소에 따른 페이지 구성 폴더|
 |routes|라우팅 관련 처리 폴더|
@@ -137,7 +137,7 @@ root
 
 💡 이유 : styled-componet 파일이 길어지면서 한 파일 내에서 JSX 코드와 CSS 코드를 동시에 보기가 어려워져, 가독성을 위해 분리하였습니다. 추가적으로 style 컴포넌트에는 앞에 S.을 포함해 네이밍을 하여, 일반 컴포넌트와 구분하였습니다.
 
-### 2. 공통적으로 쓰는 컴포넌트를 Layout(/src/components/common/layout) 안에서 구성하고 Routes 파일에 적용했습니다.   
+### 2. 전체 적용하는 컴포넌트는 (/src/components/commons/layout) 으로 구성한 뒤 Routes 파일에 적용했습니다.
 
 💡 이유 : 최대한 코드 양을 줄이기 위해서 이며, 코드가 많아지면 빌드 속도 및 렌더링 속도가 저하되기 때문입니다. 또한, import의 빈도도 줄일수 있습니다.
 
@@ -153,8 +153,8 @@ root
 
 💡 이유 : 직관적인 코드 작성을 위해, 구조중심이 아닌 기능중심으로 파일을 분리하였습니다.
 
-### 6. redux를 이용한 비동기처리로 error를 관리했습니다.  
+### 6. redux 비동기처리로 data에 대한 start, success, error 를 나누어 관리했습니다.
 
-💡 이유 : redux에서 thunk로 비동기를 관리해 error를 잡았고 error상태를 표시했습니다.
+💡 이유 : api 비동기처리에서 로딩 중 일때, 성공 혹은 실패했을 때에 따라 각각 후속 처리가 가능하고, 개발단계에서 logger 와 DevTools 에서 직관적으로 확인이 가능하기 때문에 나누어 관리했습니다.
 
 

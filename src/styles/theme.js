@@ -1,17 +1,7 @@
-// type Colors = {
-//   BLACK: string;
-// };
-
-// type FontSize = {
-//   X_SMALL: string;
-//   SMALL: string;
-//   MEDIUM: string;
-//   SEMI_M: string;
-//   TITLE: string;
-// };
-
 const colors = {
   BLACK: '#000000',
+  WHITE: '#ffffff',
+  LIGHT_GRAY: '#d3d3d3',
 };
 
 const fontSize = {
@@ -22,9 +12,14 @@ const fontSize = {
   TITLE: '24px',
 };
 
+const fontWeight = {
+  BOLD: 'Bold',
+};
+
 const theme = {
   colors,
   fontSize,
+  fontWeight,
 };
 
 export default theme;

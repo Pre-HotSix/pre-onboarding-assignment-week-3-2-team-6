@@ -1,15 +1,15 @@
-import { ThemeProvider } from 'styled-components';
-import Router from './routes/Router';
-import { GlobalStyle } from './styles/GlobalStyle';
-import theme from './styles/theme';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/commons/layout';
+import { MainPage } from './pages/index';
 
-function App() {
+export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Router />
-    </ThemeProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<MainPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

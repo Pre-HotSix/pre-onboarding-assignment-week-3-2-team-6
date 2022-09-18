@@ -20,6 +20,7 @@ function CommentList() {
     dispatch(deleteCommentThunk(id));
     dispatch(paginationAction(1));
   };
+  
   const getData = (id) => {
     if (Object.keys(singleComment).length !== 0) alert('기존 폼을 *수정 완료* 혹은 *수정 취소* 후, 수정 할 댓글을 다시 선택해주세요');
     else dispatch(getCommentThunk(id));

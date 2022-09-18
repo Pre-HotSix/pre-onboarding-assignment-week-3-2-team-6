@@ -137,7 +137,7 @@ root
 
 💡 이유 : styled-componet 파일이 길어지면서 한 파일 내에서 JSX 코드와 CSS 코드를 동시에 보기가 어려워져, 가독성을 위해 분리하였습니다. 추가적으로 style 컴포넌트에는 앞에 S.을 포함해 네이밍을 하여, 일반 컴포넌트와 구분하였습니다.
 
-### 2. 공통적으로 쓰는 컴포넌트를 Layout(/src/components/common/layout) 안에서 구성하고 Routes 파일에 적용했습니다. (Navigation, Footer, Header).  
+### 2. 공통적으로 쓰는 컴포넌트를 Layout(/src/components/common/layout) 안에서 구성하고 Routes 파일에 적용했습니다.   
 
 💡 이유 : 최대한 코드 양을 줄이기 위해서 이며, 코드가 많아지면 빌드 속도 및 렌더링 속도가 저하되기 때문입니다. 또한, import의 빈도도 줄일수 있습니다.
 
@@ -145,13 +145,13 @@ root
 
 💡 이유 : import 경로가 길어지면 가독성이 떨어지고, 파일 추적이 불편하다는 단점이 있기때문입니다. 이를 줄이기 위해 각 root 폴더에 index.js 파일을 만들어 export default 핸들링을 했습니다.
 
-### 4. redux ducks패턴을 이용해 하나의 파일내에서 action함수와 reducer를 관리했습니다.  
+### 4. Redux Ducks 패턴을 이용해, 하나의 파일 내에서 action, thunk, reducer를 관리했습니다.
 
-💡 이유 : action함수를 이용해서 오타로 인한 오류를 줄이고자 했으며 한 파일내에서 reducer까지 확인을 할 수 있도록 ducks패턴을 사용했습니다.
+💡 이유 : 한 파일 내에서 action 객체, thunk 함수, reducer 를 관리할 수 있어서, 기능중심으로 파일을 나눈 Ducks 패턴을 사용하였습니다. 추가로, action 객체를 바로 사용하면 오타와 관련된 오류가 발생하기때문에 action 생성자 함수를 이용했습니다.
 
-### 5. redux폴더내에 상태별로 파일을 분기해서 index.js파일에 combineRㄱeducers로 합쳤습니다.  
+### 5. redux 폴더내에 기능별로 파일을 분리한 후, index.js 파일에서 rootReducer 로 병합하였습니다.
 
-💡 이유 : 상태별로 분리해 가독성을 좋게 했습니다.
+💡 이유 : 직관적인 코드 작성을 위해, 구조중심이 아닌 기능중심으로 파일을 분리하였습니다.
 
 ### 6. redux를 이용한 비동기처리로 error를 관리했습니다.  
 

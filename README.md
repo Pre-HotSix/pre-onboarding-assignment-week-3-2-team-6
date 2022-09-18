@@ -6,9 +6,9 @@
 
 <br/>
 
-## 배포 링크
+## 구현 영상 링크
 
-https://hotsix-thingsflow.netlify.app/
+https://www.youtube.com/watch?v=qrooeil4vdg
 
 <br/>
 
@@ -41,19 +41,24 @@ https://hotsix-thingsflow.netlify.app/
 
 레포지토리를 `clone` 합니다
 ```markdown
-$ git clone https://github.com/Pre-HotSix/wanted-pre-onboarding-thingsFLow.git
+$ git clone https://github.com/Pre-HotSix/pre-onboarding-assignment-week-3-2-team-6/tree/main/src
 ```
 dependencies를 설치합니다
 ```markdown
 $ npm install
 ```
-프로젝트를 실행합니다
+env를 설정합니다
 ```markdown
-$ npm start
+$ 내려받은 프로젝트의 최상위 폴더 안에 .env 파일을 생성합니다.
+REACT_APP_API_URL=http://localhost:4000/comments
 ```
 api 서버를 실행합니다
 ```markdown
 $ npm run api
+```
+프로젝트를 실행합니다
+```markdown
+$ npm start
 ```
 <br/>
 
@@ -71,7 +76,7 @@ root
 |   └── index.html
 └── src
     ├── apis
-    ├── assets
+    ├── containers
     ├── components
     ├── pages
     ├── routes
@@ -121,6 +126,8 @@ root
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) 
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) 
+![Redux](https://img.shields.io/badge/redux-764ABC?style=for-the-badge&logo=redux&logoColor=white) 
+
 
 <br />
 
@@ -138,11 +145,11 @@ root
 
 💡 이유 : import 경로가 길어지면 가독성이 떨어지고, 파일 추적이 불편하다는 단점이 있기때문입니다. 이를 줄이기 위해 각 root 폴더에 index.js 파일을 만들어 export default 핸들링을 했습니다.
 
-### 4. redux dux패턴을 이용해 하나의 파일내에서 action함수와 reducer를 관리했습니다.  
+### 4. redux ducks패턴을 이용해 하나의 파일내에서 action함수와 reducer를 관리했습니다.  
 
-💡 이유 : action함수를 이용해서 오타로 인한 오류를 줄이고자 했으며 한 파일내에서 reducer까지 확인을 할 수 있도록 dux패턴을 사용했습니다.
+💡 이유 : action함수를 이용해서 오타로 인한 오류를 줄이고자 했으며 한 파일내에서 reducer까지 확인을 할 수 있도록 ducks패턴을 사용했습니다.
 
-### 5. redux폴더내에 상태별로 파일을 분기해서 index.js파일에 combineReducers로 합쳤습니다.  
+### 5. redux폴더내에 상태별로 파일을 분기해서 index.js파일에 combineRㄱeducers로 합쳤습니다.  
 
 💡 이유 : 상태별로 분리해 가독성을 좋게 했습니다.
 

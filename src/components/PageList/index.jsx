@@ -5,7 +5,7 @@ import { paginationAction, LIMIT } from '../../redux/modules/pagination';
 function PageList() {
   const pageArray = [];
   const dispatch = useDispatch();
-  const comments = useSelector(state => state.comments);
+  const comments = useSelector(state => state.comments.data);
   const changePage = (i) => dispatch(paginationAction(i));
 
   for (let i = 1; i <= Math.ceil(comments.length / LIMIT); i++) {

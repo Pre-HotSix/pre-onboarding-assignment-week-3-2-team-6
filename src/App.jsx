@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/commons/layout';
-import { MainPage } from './pages/index';
+import Layout from 'components/commons/layout';
+import { MainPage } from 'pages/index';
+import './App.css';
 
 export default function App() {
   return (

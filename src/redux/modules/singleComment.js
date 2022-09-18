@@ -1,20 +1,20 @@
-import { getCommentApi } from '../../apis/axios';
+import { getCommentApi } from 'apis/axios';
 import { ERROR, errorAction } from './error';
 
 const GET_COMMENT = 'getComment';
 function getCommentAction(data) {
-  return  {
+  return {
     type: GET_COMMENT,
-    data
+    data,
   };
-};
+}
 
 const RESET_FORM = 'resetForm';
 export function resetFormAction() {
-  return  {
-    type: RESET_FORM
+  return {
+    type: RESET_FORM,
   };
-};
+}
 
 export function getCommentThunk(commentId) {
   return async (dispatch) => {
@@ -25,18 +25,18 @@ export function getCommentThunk(commentId) {
       dispatch(errorAction(error));
     }
   };
-};
+}
 
 const initialState = {};
 export function singleCommentReducer(state = initialState, action) {
   switch (action.type) {
-		case GET_COMMENT:
-			return { ...action.data };
-		case RESET_FORM:
+    case GET_COMMENT:
+      return { ...action.data };
+    case RESET_FORM:
       return {};
     case ERROR:
       return state;
-		default:
-			return {};
-	}
-};
+    default:
+      return {};
+  }
+}

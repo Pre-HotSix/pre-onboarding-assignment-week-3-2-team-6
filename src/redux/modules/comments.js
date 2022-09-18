@@ -1,38 +1,43 @@
-import { getAllCommentsApi, deleteCommentApi, postCommentApi, putCommentApi } from '../../apis/axios';
+import {
+  getAllCommentsApi,
+  deleteCommentApi,
+  postCommentApi,
+  putCommentApi,
+} from 'apis/axios';
 import { ERROR, errorAction } from './error';
 
 const GET_ALLCOMMENTS = 'getAllComments';
 function getAllAction(data) {
-  return  {
+  return {
     type: GET_ALLCOMMENTS,
-    data
+    data,
   };
-};
+}
 
 const DELETE_COMMENT = 'deleteComment';
 function deleteCommentAction(commentId) {
-  return  {
+  return {
     type: DELETE_COMMENT,
-    commentId
+    commentId,
   };
-};
+}
 
 const POST_COMMENT = 'postComment';
 function postCommentAction(data) {
-  return  {
+  return {
     type: POST_COMMENT,
-    data
+    data,
   };
-};
+}
 
 const PUT_COMMENT = 'putComment';
 function putCommentAction(data, commentId) {
-  return  {
+  return {
     type: PUT_COMMENT,
     data,
-    commentId
+    commentId,
   };
-};
+}
 
 export function getAllThunk() {
   return async (dispatch) => {
@@ -43,7 +48,7 @@ export function getAllThunk() {
       dispatch(errorAction(error));
     }
   };
-};
+}
 
 export function deleteCommentThunk(commentId) {
   return async (dispatch) => {
@@ -54,51 +59,66 @@ export function deleteCommentThunk(commentId) {
       dispatch(errorAction(error));
     }
   };
-};
+}
 
 export function postCommentThunk({ profile_url, author, content, createdAt }) {
   return async (dispatch) => {
     try {
-      const data = await postCommentApi({ profile_url, author, content, createdAt });
+      const data = await postCommentApi({
+        profile_url,
+        author,
+        content,
+        createdAt,
+      });
       dispatch(postCommentAction(data));
     } catch (error) {
       dispatch(errorAction(error));
     }
   };
-};
+}
 
-export function putCommentThunk(commentId, { profile_url, author, content, createdAt }) {
+export function putCommentThunk(
+  commentId,
+  { profile_url, author, content, createdAt }
+) {
   return async (dispatch) => {
     try {
-      const data = await putCommentApi(commentId, { profile_url, author, content, createdAt });
+      const data = await putCommentApi(commentId, {
+        profile_url,
+        author,
+        content,
+        createdAt,
+      });
       dispatch(putCommentAction(data, commentId));
     } catch (error) {
       dispatch(errorAction(error));
     }
   };
-};
+}
 
 const initialState = [];
 export function commentsReducer(state = initialState, action) {
   switch (action.type) {
-		case GET_ALLCOMMENTS:
-			return [ ...action.data ];
-		case DELETE_COMMENT: {
-      const actionData = state.filter(comment => comment.id !== action.commentId);
-      return [ ...actionData ];
+    case GET_ALLCOMMENTS:
+      return [...action.data];
+    case DELETE_COMMENT: {
+      const actionData = state.filter(
+        (comment) => comment.id !== action.commentId
+      );
+      return [...actionData];
     }
-		case POST_COMMENT:
-			return [ action.data, ...state ];
-		case PUT_COMMENT: {
-      const actionData = state.map(comment => {
+    case POST_COMMENT:
+      return [action.data, ...state];
+    case PUT_COMMENT: {
+      const actionData = state.map((comment) => {
         if (comment.id === action.commentId) return action.data;
         return comment;
       });
-      return [ ...actionData ];
+      return [...actionData];
     }
     case ERROR:
-			return state;
-		default:
-			return state
-	}
-};
+      return state;
+    default:
+      return state;
+  }
+}

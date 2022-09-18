@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Layout() {
@@ -8,14 +8,14 @@ export default function Layout() {
         <Outlet />
       </LayoutBox>
     </LayoutContainer>
-  )
-};
+  );
+}
 
 const LayoutContainer = styled.div`
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.LIGHT_GRAY};
+  background-color: gray;
 `;
 
 const LayoutBox = styled.div`
@@ -23,6 +23,5 @@ const LayoutBox = styled.div`
   min-height: 100vh;
   width: 100%;
   height: 100%;
-  border: 5px solid white;
   background-color: white;
 `;

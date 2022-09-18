@@ -28,9 +28,9 @@ export const ButtonBox = styled.div`
     margin-right: 10px;
     padding: 0.375rem 0.75rem;
     border-radius: 0.25rem;
-    border: 1px solid ${({ theme }) => theme.colors.LIGHT_GRAY};;
-    background-color: ${({ theme }) => theme.colors.WHITE};;
-    font-size: ${({ theme }) => theme.fontSize.MEDIUM};
+    border: 1px solid gray;
+    background-color: inherit;
+    font-size: 15px;
     cursor: pointer;
   }
 `;

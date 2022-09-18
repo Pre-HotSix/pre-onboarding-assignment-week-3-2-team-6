@@ -5,7 +5,7 @@ export const FormStyle = styled.div`
     padding: 0 10px;
     margin-bottom: 50px;
     * {
-      font-size: ${({ theme }) => theme.fontSize.SMALL};
+      font-size: 14px;
     }
   }
   & > form > textarea {

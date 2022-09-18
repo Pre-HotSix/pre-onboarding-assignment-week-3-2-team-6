@@ -1,13 +1,6 @@
 {
   "comments": [
     {
-      "profile_url": "https://picsum.photos/id/6/50/50",
-      "author": "abc_6",
-      "content": "React 소스 배포는 보통 어떤식으로 하나요?",
-      "createdAt": "2022-03-08",
-      "id": 6
-    },
-    {
       "id": 7,
       "profile_url": "https://picsum.photos/id/7/50/50",
       "author": "abc_7",
@@ -73,9 +66,23 @@
     {
       "profile_url": "https://picsum.photos/id/17/50/50",
       "author": "abc_17",
-      "content": "post 잘되나요?",
+      "content": "post 잘되나요????",
       "createdAt": "2022-09-18",
       "id": 17
+    },
+    {
+      "profile_url": "https://picsum.photos/id/18/50/50",
+      "author": "abc_18",
+      "content": "reset 되나요?",
+      "createdAt": "2022-09-18",
+      "id": 18
+    },
+    {
+      "profile_url": "https://picsum.photos/id/19/50/50",
+      "author": "abc_19",
+      "content": "잘 되는 건가요? 답이나 해주세요!!",
+      "createdAt": "2022-09-18",
+      "id": 19
     }
   ]
 }

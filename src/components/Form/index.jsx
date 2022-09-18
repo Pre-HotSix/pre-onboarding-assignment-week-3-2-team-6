@@ -7,7 +7,8 @@ import { useRef } from 'react';
 
 function Form() {
   const dispatch = useDispatch();
-  const ref = useRef();
+  const formRef = useRef();
+  const singleComment = useSelector(state => state.singleComment.data);
 
   const dateToday = () => {
     const today = new Date();
@@ -18,14 +19,12 @@ function Form() {
 
     return full;
   };
-
-  const singleComment = useSelector(state => state.singleComment.data);
   
   const postData = ({ ...inputData }) => dispatch(postCommentThunk({ ...inputData }));
   const putData = (id, { ...inputData }) => dispatch(putCommentThunk(id, { ...inputData }));
   const resetForm = () => {
     dispatch(resetFormAction());
-    ref.current.reset();
+    formRef.current.reset();
   };
 
   const submitHandler = (e, id) => {
@@ -42,13 +41,13 @@ function Form() {
       postData({ ...inputData });
       dispatch(paginationAction(1));
     } else putData(commentId, { ...inputData });
-    ref.current.reset();
+    formRef.current.reset();
   };
 
 
   return (
     <S.FormStyle>
-      <form onSubmit={(e) => submitHandler(e, singleComment.id)} ref={ref}>
+      <form onSubmit={(e) => submitHandler(e, singleComment.id)} ref={formRef}>
         <input
           type="text"
           name="profile_url"

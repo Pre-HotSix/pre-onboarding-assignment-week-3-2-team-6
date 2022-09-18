@@ -1,6 +1,6 @@
 export const LIMIT = 4;
 
-const PAGINATION = 'pagination';
+const PAGINATION = 'pagination/PAGINATION';
 export function paginationAction(page) {
   return  {
     type: PAGINATION,

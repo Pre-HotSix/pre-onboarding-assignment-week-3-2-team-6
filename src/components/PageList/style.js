@@ -13,4 +13,10 @@ line-height: 1.5;
 border: 1px solid lightgray;
 cursor: pointer;
 margin-right: 3px;
+${({ active }) =>
+  active && `
+    background: gray;
+    color: #fff;
+  `
+};
 `;

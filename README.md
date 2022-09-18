@@ -7,8 +7,7 @@
 <br/>
 
 ## 구현 영상 링크
-
-https://www.youtube.com/watch?v=qrooeil4vdg
+https://user-images.githubusercontent.com/103626175/190916370-117346ec-f236-4bf7-915c-06d6e7347b95.mp4
 
 <br/>
 

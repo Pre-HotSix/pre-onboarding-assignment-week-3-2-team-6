@@ -33,7 +33,7 @@ function Form() {
       createdAt: ET[3].value,
     };
 
-    if (singleCommentDatas.a) {
+    if (singleCommentDatas) {
       dispatch(putCommentThunk(singleCommentDatas.id, singleComment));
     } else {
       dispatch(postCommentThunk(singleComment));

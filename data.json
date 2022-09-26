@@ -71,13 +71,6 @@
       "createdAt": "2022-03-11"
     },
     {
-      "profile_url": "https://picsum.photos/id/12/50/50",
-      "author": "abc_12",
-      "content": "주변에 React 개발자 있나요fafaf",
-      "createdAt": "2022-03-12",
-      "id": 12
-    },
-    {
       "profile_url": "https://picsum.photos/id/13/50/50",
       "author": "abc_13",
       "content": "주변에 React 개발자 있나요",
@@ -170,7 +163,7 @@
     },
     {
       "profile_url": "https://picsum.photos/id/18/50/50",
-      "author": "atatat",
+      "author": "하이용",
       "content": "fafafa",
       "createdAt": "2022-03-13",
       "id": 26
@@ -248,16 +241,23 @@
     {
       "profile_url": "https://picsum.photos/id/3/50/50",
       "author": "fafaf",
-      "content": "afaf",
-      "createdAt": "afaf",
-      "id": 37
-    },
-    {
-      "profile_url": "https://picsum.photos/id/3/50/50",
-      "author": "fafaf",
       "content": "afaffafaf",
       "createdAt": "afaf",
       "id": 38
+    },
+    {
+      "profile_url": "https://picsum.photos/id/13/50/50",
+      "author": "수정인데용",
+      "content": "adafafafafdada",
+      "createdAt": "2022-03-16",
+      "id": 39
+    },
+    {
+      "profile_url": "https://picsum.photos/id/13/50/50",
+      "author": "공유요잉용",
+      "content": "ㄴ함ㅎㄴ허ㅏㅣㅎ",
+      "createdAt": "2022-03-17",
+      "id": 40
     }
   ]
 }
